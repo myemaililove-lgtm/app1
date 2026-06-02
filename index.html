@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แบบฟอร์มแจ้งเรื่องร้องทุกข์</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1>📝 แบบฟอร์มแจ้งเรื่องร้องทุกข์</h1>
+                <p class="subtitle">ช่วยให้เรารู้ว่าเกิดเรื่องอะไรขึ้น</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="form-wrapper">
+            <div class="form-header">
+                <h2>กรุณากรอกข้อมูลด้านล่าง</h2>
+                <p class="form-description">ข้อมูลของท่านจะช่วยเราปรับปรุงบริการ</p>
+            </div>
+            
+            <form id="complaintForm" class="complaint-form">
+                <div id="message" class="alert hidden"></div>
+
+                <div class="form-group">
+                    <div class="label-wrapper">
+                        <label for="name">👤 ชื่อผู้แจ้ง</label>
+                    </div>
+                    <input 
+                        type="text" 
+                        id="name" 
+                        name="name" 
+                        placeholder="ชื่อของคุณ"
+                        maxlength="100"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <div class="label-wrapper">
+                        <label for="content">💬 รายละเอียดเรื่องร้องทุกข์ <span class="required">*</span></label>
+                    </div>
+                    <textarea 
+                        id="content" 
+                        name="content" 
+                        placeholder="กรุณาระบุรายละเอียด..." 
+                        required
+                        rows="6"
+                        maxlength="1000"
+                    ></textarea>
+                    <small class="char-count"><span id="charCount">0</span>/1000</small>
+                </div>
+
+                <button type="submit" class="btn-submit" id="submitBtn">✓ ส่งข้อมูล</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Complaint Management System</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
